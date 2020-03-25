@@ -5692,6 +5692,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1491203808}
   - component: {fileID: 1491203807}
+  - component: {fileID: 1491203812}
+  - component: {fileID: 1491203811}
+  - component: {fileID: 1491203810}
+  - component: {fileID: 1491203809}
   m_Layer: 0
   m_Name: FreeExampleGrey
   m_TagString: Untagged
@@ -5706,7 +5710,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491203806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ee24ecd8c6e2a7439d88dd3cee27451, type: 3}
   m_Name: 
@@ -5743,6 +5747,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1491203809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491203806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732e324d818163d478870cfa636cd8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+--- !u!114 &1491203810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491203806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68da0893f9fc5ff41b760ecd997a454c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useMouseInput: 0
+  addRoll: 1
+  pitch: 0
+  yaw: 0
+  roll: 0
+  strafe: 0
+  throttle: 0
+--- !u!114 &1491203811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491203806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0a2bde8f9f27c4ca1fbe92037be0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linearForce: {x: 10, y: 10, z: 10}
+  angularForce: {x: 10, y: 10, z: 10}
+  reverseMultiplier: 1
+  forceMultiplier: 1
+--- !u!54 &1491203812
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491203806}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &1491322553
 Mesh:
   m_ObjectHideFlags: 0
