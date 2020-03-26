@@ -20,7 +20,7 @@ public class ShipInput : MonoBehaviour
     public float roll;
     [Range(-1, 1)]
     public float strafe;
-    [Range(0, 1)]
+    [Range(-1, 1)]
     public float throttle;
 
     // How quickly the throttle reacts to input.
@@ -84,7 +84,7 @@ public class ShipInput : MonoBehaviour
         if (Input.GetKey(increaseKey))
             target = 1.0f;
         else if (Input.GetKey(decreaseKey))
-            target = 0.0f;
+            target = -1.0f;
 
         throttle = Mathf.MoveTowards(throttle, target, Time.deltaTime * THROTTLE_SPEED);
     }

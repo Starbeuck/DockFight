@@ -7,17 +7,17 @@
 public class ShipPhysics : MonoBehaviour
 {
     [Tooltip("X: Lateral thrust\nY: Vertical thrust\nZ: Longitudinal Thrust")]
-    public Vector3 linearForce = new Vector3(100.0f, 100.0f, 100.0f);
+    public Vector3 linearForce = new Vector3(10.0f, 10.0f, 10.0f);
 
     [Tooltip("X: Pitch\nY: Yaw\nZ: Roll")]
-    public Vector3 angularForce = new Vector3(100.0f, 100.0f, 100.0f);
+    public Vector3 angularForce = new Vector3(10.0f, 10.0f, 10.0f);
 
     [Range(0.0f, 1.0f)]
     [Tooltip("Multiplier for longitudinal thrust when reverse thrust is requested.")]
     public float reverseMultiplier = 1.0f;
 
     [Tooltip("Multiplier for all forces. Can be used to keep force numbers smaller and more readable.")]
-    public float forceMultiplier = 100.0f;
+    public float forceMultiplier = 2.0f;
 
     public Rigidbody Rigidbody { get { return rbody; } }
 
