@@ -36,20 +36,23 @@ public class ShipInput : MonoBehaviour
 
     private void Update()
     {
-        if (useMouseInput)
+       // if (useMouseInput)
         {
-            strafe = Input.GetAxis("Horizontal");
-            SetStickCommandsUsingMouse();
-            UpdateMouseWheelThrottle();
-            UpdateKeyboardThrottle(KeyCode.W, KeyCode.S);
+          //  strafe = Input.GetAxis("Horizontal");
+            //SetStickCommandsUsingMouse();
+            //UpdateMouseWheelThrottle();
+           // UpdateKeyboardThrottle(KeyCode.W, KeyCode.S);
         }
-        else
+        //else
         {            
             pitch = Input.GetAxis("Vertical");
-            yaw = Input.GetAxis("Horizontal");
+            roll = -Input.GetAxis("Horizontal");
+            yaw = Input.GetAxis("Yaw");
+            throttle = Input.GetAxis("Throttle");
+
 
             if (addRoll)
-                roll = -Input.GetAxis("Horizontal") * 0.5f;
+                yaw = Input.GetAxis("Yaw") * 0.5f;
 
             strafe = 0.0f;
             UpdateKeyboardThrottle(KeyCode.R, KeyCode.F);

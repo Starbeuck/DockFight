@@ -63,7 +63,12 @@ public class Movements : MonoBehaviour
         //propel the object forward
 
 
-        ///
+        ///pitch = Input.GetAxis("Vertical");
+        // roll = -Input.GetAxis("Horizontal");
+        //yaw = Input.GetAxis("Yaw");
+        // = Input.GetAxis("Throttle");
+
+
 
 
     }

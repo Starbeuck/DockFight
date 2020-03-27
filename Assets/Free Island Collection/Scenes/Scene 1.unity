@@ -5773,7 +5773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useMouseInput: 0
-  addRoll: 1
+  addRoll: 0
   pitch: 0
   yaw: 0
   roll: 0
@@ -5791,8 +5791,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0a2bde8f9f27c4ca1fbe92037be0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linearForce: {x: 10, y: 10, z: 10}
-  angularForce: {x: 10, y: 10, z: 10}
+  linearForce: {x: 5, y: 5, z: 150}
+  angularForce: {x: 5.5, y: 5, z: 10}
   reverseMultiplier: 1
   forceMultiplier: 1
 --- !u!54 &1491203812
@@ -5803,11 +5803,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491203806}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 0.5
+  m_Drag: 0.5
+  m_AngularDrag: 1.5
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
