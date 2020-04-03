@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.25
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 984039097}
-  m_IndirectSpecularColor: {r: 0.03225346, g: 0.03914927, b: 0.052876398, a: 0.25}
+  m_IndirectSpecularColor: {r: 0.032239165, g: 0.039148986, b: 0.05288078, a: 0.25}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5710,7 +5710,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491203806}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ee24ecd8c6e2a7439d88dd3cee27451, type: 3}
   m_Name: 
@@ -5759,7 +5759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732e324d818163d478870cfa636cd8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
 --- !u!114 &1491203810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5772,8 +5772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68da0893f9fc5ff41b760ecd997a454c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useMouseInput: 0
-  addRoll: 0
+  useMouseInput: 1
+  addRoll: 1
   pitch: 0
   yaw: 0
   roll: 0
@@ -8602,7 +8602,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2121255496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2121255503
