@@ -11,13 +11,13 @@ public class WeaponManager : MonoBehaviour
     void Update()
     {
         //Shoot primary weapon
-        if(Input.GetButton("Fire1") && primaryWeapon != null && Time.time >= primaryWeapon.nextTimeToFire)
+        if(Input.GetButton("Fire1") && primaryWeapon != null)
         {
             if(primaryWeapon.isPrecharged)
             {
                 primaryWeapon.fire();
             }
-            else
+            else if(Time.time >= primaryWeapon.nextTimeToFire)
             {
                 primaryWeapon.nextTimeToFire = Time.time + 1f / primaryWeapon.fireRate;
                 primaryWeapon.fire();
@@ -31,7 +31,7 @@ public class WeaponManager : MonoBehaviour
             {
                 secondaryWeapon.fire();
             }
-            else
+            else if(Time.time >= secondaryWeapon.nextTimeToFire)
             {
                 secondaryWeapon.nextTimeToFire = Time.time + 1f / secondaryWeapon.fireRate;
                 secondaryWeapon.fire();
@@ -41,7 +41,8 @@ public class WeaponManager : MonoBehaviour
         //Reload precharded weapons
         if(Input.GetKeyDown(KeyCode.R))
         {
-            if(primaryWeapon.isPrecharged && !secondaryWeapon.readyToFire)
+            Debug.Log("Recharge");
+            if(primaryWeapon.isPrecharged && !secondaryWeapon.readyToFire && primaryWeapon.prechargedProjectiles == null)
             {
                 primaryWeapon.initiateProjectiles();
             }

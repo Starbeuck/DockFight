@@ -16,7 +16,7 @@ public class ShipWeapon : MonoBehaviour
     [Space]
     [Header("Associated objets")]
     public GameObject projectilePrefab;
-    public Transform shootingPoint;
+    public Transform[] shootingPoints;
     [Space]
     public Transform[] projectilesPositions; //For precharged weapons only
     public List<Projectile> prechargedProjectiles; //For precharged weapons only
@@ -47,11 +47,14 @@ public class ShipWeapon : MonoBehaviour
             isFiring = true;
             firingCoroutine = StartCoroutine(LaunchAllMissiles());
         }
-        else if(shootingPoint != null)
+        else if(shootingPoints != null)
         {
-            GameObject bulletGO = Instantiate(projectilePrefab, shootingPoint.position, shootingPoint.rotation);
-            bulletGO.GetComponentInChildren<Projectile>().bulletSpeed = speed;
-            bulletGO.GetComponentInChildren<Projectile>().damage = damage;
+            for (int i = 0; i < shootingPoints.Length; i++)
+            {
+                GameObject bulletGO = Instantiate(projectilePrefab, shootingPoints[i].position, shootingPoints[i].rotation);
+                bulletGO.GetComponentInChildren<Projectile>().bulletSpeed = speed;
+                bulletGO.GetComponentInChildren<Projectile>().damage = damage;
+            }
         }
     }
 
@@ -81,10 +84,9 @@ public class ShipWeapon : MonoBehaviour
             {
                 prechargedProjectiles[i].target = target;
             }
-
             yield return new WaitForSeconds(0.1f); // wait till the next round
         }
-
+        prechargedProjectiles.Clear();
         isFiring = false;
     }
 }
